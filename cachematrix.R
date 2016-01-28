@@ -1,7 +1,12 @@
-## Put comments here that give an overall description of what your
-## functions do
+## This code follows the same pattern as the example code provided to cache the mean
+## of a vector. 
+## The makeCacheMatrix function returns a list of functions with getters and setters for
+## the matrix itself and for its inverse. 
+## The cacheSolve function computes the inverse of the matrix if it needs to - otherwise
+## it will return the cached version.
 
-## Write a short comment describing this function
+## makeCacheMatrix returns a list of functions to get and set both the matrix and to get 
+## and set the inverse matrix
 
 makeCacheMatrix <- function(x = matrix()) {
     
@@ -20,7 +25,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve takes a makeCacheMatrix "special matrix" and calls the solve
+## function to compute the inverse if the "special matrix" does not have the
+## cached version of the inverse.
 
 cacheSolve <- function(x, ...) {
     
